@@ -206,7 +206,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- Daniel Gidey
+| Name           | Role      |
+| -------------- | --------- |
+| Daniel Gidey   | Team Lead |
+| Hluf G/meskel  | Developer |
+| Meron Embaye   | Developer |
+| Hermela Teklay | Developer |
+| Eden Kidane    | Developer |
+| Hayelom Takele | Developer |
 
 ## 🙏 Acknowledgments
 
