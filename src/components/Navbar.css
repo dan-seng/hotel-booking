@@ -1,34 +1,39 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  background: var(--glass-bg);
+  background: rgba(26, 26, 46, 0.8);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
 }
 
-.nav-content {
-  max-width: 1400px;
+.navbar-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-brand a {
-  font-size: 1.5rem;
+.navbar-logo {
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--text-light);
+  color: #ffffff;
   text-decoration: none;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(45deg, #4a90e2, #e74c3c);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
 }
 
-.nav-brand a:hover {
+.navbar-logo:hover {
   transform: scale(1.05);
 }
 
@@ -38,65 +43,124 @@
   align-items: center;
 }
 
-.nav-links a {
-  color: var(--text-light);
+.nav-link {
+  color: #ffffff;
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: 500;
-  position: relative;
   padding: 0.5rem 0;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.9;
 }
 
-.nav-links a::after {
+.nav-link:hover {
+  color: #4a90e2;
+  opacity: 1;
+}
+
+.nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(45deg, #4a90e2, #e74c3c);
   transition: width 0.3s ease;
+  opacity: 0;
 }
 
-.nav-links a:hover {
-  color: var(--accent-color);
-}
-
-.nav-links a:hover::after {
+.nav-link:hover::after {
   width: 100%;
+  opacity: 1;
 }
 
-.book-now-link {
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-  padding: 0.75rem 1.5rem !important;
-  border-radius: 25px;
-  color: var(--text-light) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+.auth-link {
+  background: linear-gradient(45deg, #4a90e2, #e74c3c);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  opacity: 1;
 }
 
-.book-now-link:hover {
+.auth-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+  opacity: 1;
 }
 
-.book-now-link::after {
+.mobile-menu-btn {
   display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
-  .nav-content {
-    padding: 1rem;
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
   }
 
   .nav-links {
-    gap: 1rem;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .nav-brand a {
-    font-size: 1.25rem;
+  .nav-links.active {
+    transform: translateY(0);
   }
 
-  .book-now-link {
-    padding: 0.5rem 1rem !important;
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .auth-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .auth-link {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
   }
 } 
