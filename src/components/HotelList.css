@@ -1,0 +1,220 @@
+.hotel-list {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.95), rgba(23, 27, 33, 0.95));
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.search-input,
+.filter-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+  font-size: 1rem;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.room-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.room-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.room-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  pointer-events: none;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-image img {
+  transform: scale(1.05);
+}
+
+.room-info {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.room-type {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.room-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.feature-tag:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.room-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.room-price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.room-capacity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.room-capacity svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--accent-color);
+}
+
+.book-now-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+
+.book-now-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+}
+
+@media (max-width: 768px) {
+  .hotel-list {
+    padding: 1rem;
+  }
+
+  .filters {
+    padding: 1rem;
+  }
+
+  .search-input,
+  .filter-select {
+    min-width: 100%;
+  }
+
+  .room-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .room-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .feature-tag {
+    font-size: 0.8rem;
+  }
+} 
