@@ -94,21 +94,64 @@
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.social-links a {
-  color: var(--text-light);
-  font-size: 1.5rem;
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
-  opacity: 0.8;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
 }
 
-.social-links a:hover {
-  color: var(--accent-color);
-  opacity: 1;
+.social-icon:hover {
   transform: translateY(-3px);
+}
+
+/* Social Media Brand Colors */
+.social-icon.facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.social-icon.twitter:hover {
+  background: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.social-icon.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: #dc2743;
+}
+
+.social-icon.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+}
+
+.social-icon.youtube:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+
+.social-icon.tiktok:hover {
+  background: #000000;
+  border-color: #000000;
+}
+
+.social-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .footer-bottom {
