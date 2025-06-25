@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: var(--dark-bg);
+  background:black;
   color: var(--text-light);
 }
 
@@ -97,7 +97,7 @@
 }
 
 .auth-button {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: rgb(3, 177, 3);
   color: white;
   border: none;
   border-radius: 8px;

@@ -26,9 +26,10 @@ body {
 .app {
   min-height: 100vh;
   display: flex;
+   width: 100%;
   flex-direction: column;
-  background: var(--dark-bg);
-  color: var(--text-light);
+  background: black;
+  color: rgba(240, 248, 255, 0.881);
 }
 
 .navbar {
@@ -102,8 +103,8 @@ main {
 }
 
 .footer {
-  background: var(--card-bg);
-  padding: 3rem 2rem;
+  background:rgb(13, 123, 240);
+  padding: 5px;
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--glass-border);
 }
@@ -116,14 +117,7 @@ main {
   gap: 2rem;
 }
 
-.footer-section h3 {
-  color: var(--text-light);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .footer-section p,
 .footer-section a {
@@ -133,10 +127,6 @@ main {
   transition: all 0.3s ease;
 }
 
-.footer-section a:hover {
-  color: var(--primary-color);
-  opacity: 1;
-}
 
 .social-links {
   display: flex;

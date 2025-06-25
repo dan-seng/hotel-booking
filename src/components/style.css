@@ -1,0 +1,131 @@
+.nav{
+  background-color: rgb(33, 33, 33);
+  height: 45px;
+  color: aliceblue;
+  display: flex;
+ justify-content: space-between;
+  align-items: center;
+}
+
+.nav li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;  
+}
+
+.main-page{
+  width: 100%;
+  padding: 0;
+}
+
+.upper-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin: 20px;
+  gap: 20px;
+  
+}
+.book{
+  background-image: url("hotel2.jpg");
+  background-size: cover;
+  width: 250%;
+  height: 100%;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.book-button{
+  background-color: rgb(8, 207, 47);
+  color: rgba(240, 248, 255, 0.847);
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  font-weight: 555;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.book-button:hover{
+ transform: scale(1.1);
+}
+
+.dd h1{
+ font-size: 60px;
+ color: rgba(240, 248, 255, 0.584);
+}
+
+.dd{
+  justify-content: center;
+}
+
+
+/* Middle Main*/
+.middle-main{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  height: 220px;
+}
+.footer{
+  text-align: center;
+  font-weight: 555;
+}
+
+.exp{
+  background-image: url("hotel11.jpg");
+  background-size: cover;
+  width: 75%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+text-align: center;  
+}
+
+.exp2 {
+  background-image: url("hotel16.jpg");
+  background-size: cover;
+  width: 75%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+/*lower-main */
+
+
+.lower-main{
+  display: flex;
+  gap: 10px;
+}
+.room-sax{
+  display: flex;
+  background-color: rgb(46, 46, 46);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 2px;
+  gap: 5px;
+}
+.room-sax p{
+  width: 30%;
+  font-size: 14px;
+}
+.sax-pic{
+  width: 290px;
+  border-radius: 15px;
+}

@@ -542,7 +542,31 @@ function BookingForm() {
               <span>${selectedRoom.price}</span> per night
             </div>
           </div>
+           <div className="booking-summary">
+            <div className="summary-row">
+              <span>Room Type:</span>
+              <span>{selectedRoom.type}</span>
+            </div>
+            <div className="summary-row">
+              <span>Check-in:</span>
+              <span>{formatDate(formData.checkIn)}</span>
+            </div>
+            <div className="summary-row">
+              <span>Check-out:</span>
+              <span>{formatDate(formData.checkOut)}</span>
+            </div>
+            <div className="summary-row">
+              <span>Guests:</span>
+              <span>{formData.guests}</span>
+            </div>
+            <div className="summary-row total">
+              <span>Total Price:</span>
+              <span>${totalPrice}</span>
+            </div>
+          </div>
         </div>
+
+
 
         <form onSubmit={handleSubmit}>
           <div className="form-row">
@@ -657,28 +681,7 @@ function BookingForm() {
             />
           </div>
 
-          <div className="booking-summary">
-            <div className="summary-row">
-              <span>Room Type:</span>
-              <span>{selectedRoom.type}</span>
-            </div>
-            <div className="summary-row">
-              <span>Check-in:</span>
-              <span>{formatDate(formData.checkIn)}</span>
-            </div>
-            <div className="summary-row">
-              <span>Check-out:</span>
-              <span>{formatDate(formData.checkOut)}</span>
-            </div>
-            <div className="summary-row">
-              <span>Guests:</span>
-              <span>{formData.guests}</span>
-            </div>
-            <div className="summary-row total">
-              <span>Total Price:</span>
-              <span>${totalPrice}</span>
-            </div>
-          </div>
+         
 
           <button type="submit" className="submit-button">
             Confirm Booking

@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+
 }
 
 .booking-form {
@@ -11,6 +12,8 @@
   border-radius: 15px;
   padding: 2rem;
   box-shadow: var(--glass-shadow);
+  display: flex;
+  gap: 30px;
 }
 
 .booking-form h2 {
@@ -21,7 +24,7 @@
 }
 
 .room-summary {
-  display: flex;
+  
   gap: 2rem;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -158,8 +161,8 @@
   width: 100%;
   padding: 1rem;
   margin-top: 2rem;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-  color: var(--text-light);
+  background: rgb(3, 177, 3);
+  color: rgba(240, 248, 255, 0.831);
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;

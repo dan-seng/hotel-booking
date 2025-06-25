@@ -24,7 +24,7 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          Luxury Haven
+          Luxury Hotel
         </Link>
 
         <button 
@@ -38,7 +38,6 @@ function Navbar() {
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/rooms" className="nav-link">Rooms</Link>
-          <Link to="/about" className="nav-link">About</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
           <Link to="/auth" className="auth-link">Sign In / Sign Up</Link>
         </div>

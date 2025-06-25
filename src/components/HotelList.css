@@ -161,7 +161,7 @@
 .book-now-button {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: rgb(3, 177, 3);
   color: var(--text-light);
   border: none;
   border-radius: 8px;

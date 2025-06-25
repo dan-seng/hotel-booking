@@ -1,133 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './style.css';
 
-const hotelInfo = {
-  name: "Grand Luxury Hotel",
-  location: "New York",
-  rating: 4.8,
-  description: "Experience unparalleled luxury in the heart of New York City. Our hotel offers world-class amenities, exquisite dining, and exceptional service that will make your stay truly memorable.",
-  mainImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-  features: [
-    {
-      title: "Luxury Pool",
-      description: "Enjoy our infinity pool with stunning city views",
-      icon: "🏊‍♂️"
-    },
-    {
-      title: "Fine Dining",
-      description: "Multiple award-winning restaurants",
-      icon: "🍽️"
-    },
-    {
-      title: "Spa & Wellness",
-      description: "Rejuvenate your body and mind",
-      icon: "💆‍♀️"
-    },
-    {
-      title: "Fitness Center",
-      description: "State-of-the-art equipment and classes",
-      icon: "💪"
-    }
-  ],
-  amenities: [
-    "Free WiFi",
-    "24/7 Room Service",
-    "Concierge Service",
-    "Business Center",
-    "Valet Parking",
-    "Gift Shop"
-  ]
-};
-
-const featuredRooms = [
-  {
-    id: 1,
-    type: "Deluxe Room - City View",
-    price: 299,
-    capacity: 2,
-    image: "https://images.unsplash.com/photo-1590490359683-658d3d23f972?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    features: ["King Bed", "City View", "Free WiFi", "Mini Bar", "Smart TV"]
-  },
-  {
-    id: 2,
-    type: "Executive Suite",
-    price: 499,
-    capacity: 3,
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    features: ["King Bed", "Living Room", "Executive Lounge Access", "Work Desk", "City View"]
-  },
-  {
-    id: 3,
-    type: "Presidential Suite",
-    price: 899,
-    capacity: 4,
-    image: "https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    features: ["2 King Beds", "Private Terrace", "Butler Service", "Dining Room", "Panoramic View"]
-  }
-];
-
-function Home() {
+function Home (){
   return (
-    <div className="home">
-      <section className="hero">
-        <div className="hero-content">
-          <h1>{hotelInfo.name}</h1>
-          <p className="location">{hotelInfo.location}</p>
-          <p className="rating">★ {hotelInfo.rating} Luxury Rating</p>
-          <p className="description">{hotelInfo.description}</p>
-        </div>
-      </section>
-
-      <section className="features">
-        <h2>Luxury Features</h2>
-        <div className="features-grid">
-          {hotelInfo.features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <span className="feature-icon">{feature.icon}</span>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="featured-rooms">
-        <h2>Featured Rooms</h2>
-        <div className="rooms-grid">
-          {featuredRooms.map(room => (
-            <div key={room.id} className="room-card">
-              <img src={room.image} alt={room.type} />
-              <div className="room-info">
-                <h3>{room.type}</h3>
-                <p className="price">From ${room.price} per night</p>
-                <div className="features">
-                  {room.features.map((feature, index) => (
-                    <span key={index} className="feature-tag">{feature}</span>
-                  ))}
-                </div>
-                <Link to={`/booking/${room.id}/${room.type}`} className="book-now-button">
-                  Book Now
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="amenities">
-        <h2>Hotel Amenities</h2>
-        <div className="amenities-grid">
-          {hotelInfo.amenities.map((amenity, index) => (
-            <div key={index} className="amenity-item">
-              <span className="amenity-icon">✨</span>
-              <span>{amenity}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className='main-page'>
+   <div className="upper-main">
+   <div className="book">
+    <div className='dd'>
+    <h1>Book Your Stay</h1>
+     <Link to="/rooms" className="book-button">Book Now</Link>
     </div>
-  );
+     </div>
+    <div className="things-hotel">
+      <p>
+        step into a world where elegance meets comfort.
+        Our hotel blends timeless luxury with modern charm, offering exquisite rooms,
+        curated experiences, and a heartfelt hospitality crafted to turn your stay 
+        into a story worth remembering.
+      </p>
+    </div>
+   </div>
+   <div className="middle-main">
+    <p>
+      Your comfort is our priority. Enjoy your 
+      family holiday with everything you need to make lasting memories.
+    </p>
+    <div className="exp">
+      <h3>Experience elegance and comfort</h3>
+    </div>
+    <div className="exp2">
+      <h3>
+        Relax, Refresh, Rejuvenate
+      </h3>
+    </div>
+   </div>
+ <div className="lower-main">
+ <div className="room-sax">
+    <p>
+      enjoy comfort and style with extra space, modern design, and elegant 
+      decor to make yor stay unforgattable.
+    </p>
+    <div className="img-sax">
+      <img src="/images/hotel.jpg" alt="" className='sax-pic' />
+      <h3>Deluxe Room</h3>
+      <h3>Birr 1500/Night</h3>
+    </div>
+  </div>
+  <div className="room-sax">
+    <p>
+     Experience true luxury with separate living and sleeping areas,
+      perfect for families or guests seeking more privacy.
+      </p>
+    <div className="img-sax">
+      <img src="/images/hotel3.jpg" alt=""  className='sax-pic' />
+      <h3>Suite Room</h3>
+      <h3>Birr 2500/Night</h3>
+    </div>
+  </div>
+  <div className="room-sax">
+    <p>
+     Designed for business travellers with access to exclusive services,
+     workspace, and premium amenities.
+    </p>
+    <div className="img-sax">
+      <img src="/images/hotel5.png" alt="" className='sax-pic' />
+      <h3>Execute Room</h3>
+      <h3>Birr 2000/Night</h3>
+    </div>
+  </div>
+ </div>
+
+  </div>
+  )
 }
 
-export default Home; 
+export default Home;
