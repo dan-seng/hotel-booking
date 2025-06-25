@@ -1,99 +1,64 @@
 # Luxury Hotel Booking Application
 
-A modern, responsive hotel booking web application built with React, featuring a sleek dark theme with glass morphism effects.
+A modern, responsive hotel booking web application built with React.
 
 ## 🌟 Features
 
 - **Modern UI/UX Design**
+  - Responsive layout with CSS Grid and Flexbox
+  - Glass morphism and gradient effects
+  - Font Awesome icons
 
-  - Dark theme with glass morphism effects
-  - Responsive design for all devices
-  - Smooth animations and transitions
-  - Gradient accents and modern typography
-
-- **Room Management**
-
-  - Browse available rooms
-  - Filter rooms by price and capacity
-  - Detailed room information and features
-  - Room images with hover effects
+- **Room & Hotel Management**
+  - Browse and filter available rooms by price and capacity
+  - Detailed room and hotel information
+  - Room images and feature tags
 
 - **Booking System**
+  - Booking form with validation
+  - Price calculation based on stay duration and room type
+  - Real-time form feedback
 
-  - Real-time availability checking
-  - Date selection with validation
-  - Guest information management
-  - Price calculation based on stay duration
+- **Authentication**
+  - Sign in / Sign up form with validation
+  - Social login buttons (UI only)
 
 - **Contact System**
-  - Contact form with validation
-  - Multiple contact methods
-  - Real-time form feedback
-  - Success/error handling
+  - Contact form with validation and feedback
+  - Hotel contact info section
 
 ## 🛠️ Technologies Used
 
-- **Frontend Framework**
-
-  - React.js
-  - React Router for navigation
-  - CSS3 with modern features
-  - Font Awesome for icons
-
-- **Design Patterns**
-  - Component-Based Architecture
-  - Container/Presenter Pattern
-  - Custom Hooks for state management
-  - Context API for theme management
+- React.js (v19+)
+- React Router DOM (v6+)
+- CSS3 (custom, no CSS frameworks)
+- Font Awesome (via CDN)
+- [Testing Library](https://testing-library.com/) for unit tests
 
 ## 📋 Requirements
 
-### System Requirements
-
 - Node.js (v14.0.0 or higher)
 - npm (v6.0.0 or higher)
-- Modern web browser with CSS Grid and Flexbox support
-
-### Dependencies
-
-```json
-{
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.0",
-    "@fortawesome/fontawesome-free": "^6.0.0"
-  }
-}
-```
 
 ## 🚀 Installation
 
 1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/hotel-booking.git
+   cd hotel-booking
+   ```
 
-```bash
-git clone https://github.com/yourusername/hotel-booking.git
-```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-2. Navigate to the project directory:
+3. Start the development server:
+   ```sh
+   npm start
+   ```
 
-```bash
-cd hotel-booking
-```
-
-3. Install dependencies:
-
-```bash
-npm install
-```
-
-4. Start the development server:
-
-```bash
-npm start
-```
-
-The application will be available at `http://localhost:3000`
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
 
@@ -101,108 +66,58 @@ The application will be available at `http://localhost:3000`
 hotel-booking/
 ├── public/
 │   ├── index.html
-│   └── assets/
+│   ├── favicon.ico
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── images/
+│       ├── hotel.jpg
+│       ├── hotel2.jpg
+│       └── ... (other images)
 ├── src/
-│   ├── components/
-│   │   ├── Home.js
-│   │   ├── HotelList.js
-│   │   ├── BookingForm.js
-│   │   ├── Contact.js
-│   │   ├── Navbar.js
-│   │   └── Footer.js
 │   ├── App.js
 │   ├── App.css
-│   └── index.js
+│   ├── index.js
+│   ├── index.css
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── components/
+│       ├── Navbar.js / Navbar.css
+│       ├── Footer.js / style.css
+│       ├── Home.js / style.css
+│       ├── HotelList.js / HotelList.css
+│       ├── HotelDetails.js / HotelDetails.css
+│       ├── BookingForm.js / BookingForm.css
+│       ├── Contact.js / Contact.css
+│       └── Auth.js / Auth.css
 ├── package.json
 └── README.md
 ```
 
-## 🎨 Design Patterns
+## 🧩 Main Components
 
-### 1. Component-Based Architecture
+- [`App.js`](src/App.js): Main app with routing and layout
+- [`Navbar`](src/components/Navbar.js): Top navigation bar
+- [`Footer`](src/components/Footer.js): Footer section
+- [`Home`](src/components/Home.js): Landing page
+- [`HotelList`](src/components/HotelList.js): Room/Hotel listing with filters
+- [`HotelDetails`](src/components/HotelDetails.js): Detailed hotel info (sample data)
+- [`BookingForm`](src/components/BookingForm.js): Room booking form with validation
+- [`Contact`](src/components/Contact.js): Contact form and info
+- [`Auth`](src/components/Auth.js): Sign in / Sign up UI
 
-- Modular components for reusability
-- Separation of concerns
-- Easy maintenance and testing
+## 🧪 Testing
 
-### 2. Container/Presenter Pattern
+- Unit tests are set up using [Testing Library](https://testing-library.com/).
+- Run tests with:
+  ```sh
+  npm test
+  ```
 
-- Container components for logic
-- Presenter components for UI
-- Clean separation of data and presentation
+## 🎨 Design
 
-### 3. Custom Hooks
-
-- Form handling
-- Date validation
-- Price calculations
-- State management
-
-### 4. CSS Architecture
-
-- CSS Variables for theming
-- BEM naming convention
-- Responsive design patterns
-- Glass morphism effects
-
-## 🔑 Key Features Implementation
-
-### Glass Morphism Effect
-
-```css
-.glass-effect {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-```
-
-### Responsive Design
-
-- Mobile-first approach
-- CSS Grid and Flexbox
-- Media queries for breakpoints
-- Fluid typography
-
-### Form Validation
-
-- Real-time input validation
-- Custom error messages
-- Form state management
-- Success/error feedback
-
-## 🎯 Future Enhancements
-
-1. **Backend Integration**
-
-   - Real database connection
-   - User authentication
-   - Payment processing
-
-2. **Additional Features**
-
-   - Room reviews and ratings
-   - Advanced search filters
-   - Multi-language support
-   - Dark/Light theme toggle
-
-3. **Performance Optimization**
-   - Image optimization
-   - Code splitting
-   - Lazy loading
-   - Caching strategies
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Glass morphism and gradients via CSS variables in [`App.css`](src/App.css)
+- Responsive design with media queries
+- Font Awesome icons via CDN in [`public/index.html`](public/index.html)
 
 ## 👥 Authors
 
@@ -215,9 +130,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | Eden Kidane    | Developer |
 | Hayelom Takele | Developer |
 
-## 🙏 Acknowledgments
+---
 
-- React.js community
-- Font Awesome for icons
-- Unsplash for images
-- All contributors and supporters
+This project is licensed under the MIT License.
