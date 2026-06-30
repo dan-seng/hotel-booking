@@ -104,14 +104,7 @@ hotel-booking/
 - [`BookingForm`](src/components/BookingForm.js): Room booking form with validation
 - [`Contact`](src/components/Contact.js): Contact form and info
 - [`Auth`](src/components/Auth.js): Sign in / Sign up UI
-
-## 🧪 Testing
-
-- Unit tests are set up using [Testing Library](https://testing-library.com/).
-- Run tests with:
-  ```sh
-  npm test
-  ```
+
 
 ## 🎨 Design
 
