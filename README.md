@@ -1,4 +1,4 @@
-# Luxury Hotel Booking Application
+# SPDY Hotel Booking Application
 
 A modern, responsive hotel booking web application built with React.
 
