@@ -119,16 +119,6 @@ hotel-booking/
 - Responsive design with media queries
 - Font Awesome icons via CDN in [`public/index.html`](public/index.html)
 
-## 👥 Authors
-
-| Name           | Role      |
-| -------------- | --------- |
-| Daniel Gidey   | Team Lead |
-| Hluf G/meskel  | Developer |
-| Meron Embaye   | Developer |
-| Hermela Teklay | Developer |
-| Eden Kidane    | Developer |
-| Hayelom Takele | Developer |
 
 ---
 
