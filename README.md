@@ -2,7 +2,7 @@
 
 A modern, responsive hotel booking web application built with React.
 
-## 🌟 Features
+## Features
 
 - **Modern UI/UX Design**
   - Responsive layout with CSS Grid and Flexbox
